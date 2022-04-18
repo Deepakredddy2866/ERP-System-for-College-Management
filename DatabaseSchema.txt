@@ -1,0 +1,137 @@
+                                                 collegedb Database
+                                                --------------------
++---------------------+
+| Tables_in_collegedb |
++---------------------+
+| admin               |
+| book                |
+| book_request        |
+| employee            |
+| event               |
+| exam                |
+| package_details     |
+| result              |
+| student             |
+| timetable           |
++---------------------+
+
+
+Admin Table:-
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| aid       | int          | NO   | PRI | NULL    | auto_increment |
+| aemail    | varchar(255) | YES  |     | NULL    |                |
+| aname     | varchar(255) | YES  |     | NULL    |                |
+| apassword | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+
+Book Table :-
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int          | NO   | PRI | NULL    | auto_increment |
+| pbookauthor | varchar(255) | YES  |     | NULL    |                |
+| pbookname   | varchar(255) | YES  |     | NULL    |                |
+| pbookprice  | int          | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+
+
+Book_request Table:-
++-----------+------+------+-----+---------+----------------+
+| Field     | Type | Null | Key | Default | Extra          |
++-----------+------+------+-----+---------+----------------+
+| id        | int  | NO   | PRI | NULL    | auto_increment |
+| book_id   | int  | YES  | MUL | NULL    |                |
+| studentid | int  | YES  | MUL | NULL    |                |
++-----------+------+------+-----+---------+----------------+
+
+
+Employee/Faculty Table :-
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| eid         | int          | NO   | PRI | NULL    | auto_increment |
+| econtact    | varchar(255) | YES  |     | NULL    |                |
+| edepartment | varchar(255) | YES  |     | NULL    |                |
+| email       | varchar(255) | YES  |     | NULL    |                |
+| ename       | varchar(255) | YES  |     | NULL    |                |
+| esubject    | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+
+Event Table:-
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| evid   | int          | NO   | PRI | NULL    | auto_increment |
+| evname | varchar(255) | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+
+
+Exam Table:-
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| exid       | int          | NO   | PRI | NULL    | auto_increment |
+| date       | varchar(255) | YES  |     | NULL    |                |
+| subject    | varchar(255) | YES  |     | NULL    |                |
+| time       | varchar(255) | YES  |     | NULL    |                |
+| totalmarks | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+
+Package_details table:-
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| pid                | int          | NO   | PRI | NULL    | auto_increment |
+| pbookauthor        | varchar(255) | YES  |     | NULL    |                |
+| pbookname          | varchar(255) | YES  |     | NULL    |                |
+| pbookprice         | int          | NO   |     | NULL    |                |
+| pfacultyname       | varchar(255) | YES  |     | NULL    |                |
+| pfacultypassword   | varchar(255) | YES  |     | NULL    |                |
+| plibrarianname     | varchar(255) | YES  |     | NULL    |                |
+| plibrarianpassword | varchar(255) | YES  |     | NULL    |                |
+| pname              | varchar(255) | YES  |     | NULL    |                |
+| pstudentattendance | varchar(255) | YES  |     | NULL    |                |
+| pstudenttimetable  | varchar(255) | YES  |     | NULL    |                |
++--------------------+--------------+------+-----+---------+----------------+
+
+
+Result Table:-
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| rid        | int          | NO   | PRI | NULL    | auto_increment |
+| percentage | varchar(255) | YES  |     | NULL    |                |
+| student_id | int          | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+
+Student Table:-
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int          | NO   | PRI | NULL    | auto_increment |
+| batch      | int          | NO   |     | NULL    |                |
+| contact    | varchar(255) | YES  |     | NULL    |                |
+| department | varchar(255) | YES  |     | NULL    |                |
+| emailid    | varchar(255) | YES  |     | NULL    |                |
+| name       | varchar(255) | YES  |     | NULL    |                |
+| password   | varchar(255) | YES  |     | NULL    |                |
+| pid        | int          | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+Timetable table :-
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int          | NO   | PRI | NULL    | auto_increment |
+| date       | varchar(255) | YES  |     | NULL    |                |
+| department | varchar(255) | YES  |     | NULL    |                |
+| subject    | varchar(255) | YES  |     | NULL    |                |
+| time       | varchar(255) | YES  |     | NULL    |                |
+| pid        | int          | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
